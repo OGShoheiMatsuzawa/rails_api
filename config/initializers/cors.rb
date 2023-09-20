@@ -17,7 +17,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "localhost:4200"
+    origins "https://dev-sandbox-mat01-fe.sakuramobile.jp", "localhost:4200"
 
     resource "*",
       headers: :any,

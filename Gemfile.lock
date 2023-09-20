@@ -75,6 +75,7 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    dotenv (2.8.1)
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -84,6 +85,7 @@ GEM
     irb (1.8.1)
       rdoc
       reline (>= 0.3.8)
+    kgio (2.11.4)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -109,9 +111,11 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.4-x86_64-linux)
+      racc (~> 1.4)
     psych (5.1.0)
       stringio
-    puma (5.6.7)
+    puma (6.3.1)
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.8)
@@ -147,29 +151,33 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0)
       zeitwerk (~> 2.5)
+    raindrops (0.20.1)
     rake (13.0.6)
     rdoc (6.5.0)
       psych (>= 4.0.0)
     reline (0.3.8)
       io-console (~> 0.5)
-    sqlite3 (1.6.5-arm64-darwin)
+    sqlite3 (1.6.5-x86_64-linux)
     stringio (3.0.8)
     thor (1.2.2)
     timeout (0.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     zeitwerk (2.6.11)
 
 PLATFORMS
-  arm64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
   debug
-  puma (~> 5.0)
+  dotenv
+  puma
   rack-cors
   rails (~> 7.0.8)
   sqlite3 (~> 1.4)
