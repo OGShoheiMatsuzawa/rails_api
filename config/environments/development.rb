@@ -65,4 +65,7 @@ Rails.application.configure do
 
   # 追加
   config.hosts.clear
+
+  # deviseの設定
+  config.action_mailer.default_url_options = { host: 'https://dev-sandbox-mat01-be.sakuramobile.jp', port: 3000 }
 end
