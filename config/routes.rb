@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
       resources :posts
+      resources :users, only: [:index, :show]
+      resources :home, only: [:index]
     end
+  end
+
+  namespace :auth do
+    resources :sessions, only: %i[index]
   end
 end
